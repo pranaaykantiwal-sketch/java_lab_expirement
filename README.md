@@ -1,332 +1,487 @@
-Advanced Java Programming Laboratory (ADJ Lab)
-A comprehensive collection of Advanced Java Programming laboratory practicals and projects, arranged chronologically from Experiment 1 to the final Capstone Project.
+☕ Advanced Java Programming Laboratory (ADJ Lab)
+
+
+  A comprehensive collection of Advanced Java laboratory experiments, practical implementations, and academic projects for B.Tech Computer Science and Engineering students.
+📌 Overview
+
+Welcome to my Advanced Java Programming Laboratory repository.
+
+This repository contains practical implementations of Advanced Java concepts, including desktop GUI development, MVC architecture, TCP socket programming, database connectivity, distributed computing, and Java web application development.
+
+The experiments are organized to support hands-on learning and demonstrate the practical application of Java programming concepts as part of the B.Tech Computer Science and Engineering curriculum.
+
+🎯 Objectives
+
+- Develop desktop applications using Java Swing and AWT.
+- Understand the Model-View-Controller (MVC) design pattern.
+- Implement TCP-based client-server communication.
+- Perform database operations using JDBC and MySQL.
+- Integrate graphical user interfaces with relational databases.
+- Explore distributed computing through Java RMI.
+- Configure and deploy Java web applications using Apache Tomcat.
+- Understand Servlets, session management, filters, and listeners.
+- Apply Advanced Java concepts in an integrated project.
 
 📋 Table of Contents
-Index of Experiments
-Prerequisites & System Setup
-Experiment 1: GUI Form Development using Java Swing
-Experiment 2: Model-View-Controller (MVC) Architecture
-Experiment 3: TCP Socket Programming (Client-Server Communication)
-Experiment 4: Java Database Connectivity (JDBC) CRUD Operations
-Experiment 5: Database-Driven GUI Application (Swing + JDBC Integration)
-Experiment 6: Remote Method Invocation (Java RMI Distributed Computing)
-Experiment 7: Web Server Environment Setup & Application Deployment (Apache Tomcat)
-Experiment 8: Java Web Development with Servlets, Filters, and Listeners
-Experiment 9 / Capstone: Enterprise Cycling E-Commerce Platform (BikeIsNice)
-📑 Index of Experiments
-Exp No.	Experiment Title	Core Technologies	Directory
-01	Student Registration GUI Form	Java Swing, AWT, Event Handling	exp1/
-02	MVC Pattern Calculator Application	Java Swing, MVC Architecture	calc/
-03	TCP Socket Client-Server Echo System	Java Networking (java.net), Sockets, I/O Streams	server-client/
-04	Database Connectivity & SQL Operations (JDBC)	JDBC 4.2, MySQL, PreparedStatements	jdbc/exp3/
-05	Integrated GUI with Database Storage	Swing GUI, JDBC, MySQL, Input Validation	strjdbc/
-06	Distributed Computing via Java RMI	Java RMI, Remote Interfaces, RMI Registry	Remote-Method-Invocation/
-07	Servlet Container & Web Server Deployment	Apache Tomcat 9, WAR Deployment, Web XML	apache-tomcat-9.0.121/
-08	Java Servlets, Sessions, Filters & Listeners	Jakarta EE Servlet API, Session Tracking, Filters	servent/
-09	Full-Stack Enterprise E-Commerce Platform	Jakarta EE 11, Servlets 6.1, JSP 3.1, JSTL, MySQL DAO, Swing Desktop Admin, Sockets & RMI	BikeIsNice/
-🛠️ Prerequisites & System Setup
-Ensure the following tools and runtimes are installed on your workstation:
 
-Java Development Kit (JDK 17 or 21+):
+1. "Index of Experiments" (#-index-of-experiments)
+2. "Prerequisites & System Setup" (#️-prerequisites--system-setup)
+3. "Technology Stack" (#-technology-stack)
+4. "Repository Structure" (#-repository-structure)
+5. "Experiment 1: Java Swing GUI" (#-experiment-1-gui-form-development-using-java-swing)
+6. "Experiment 2: MVC Calculator" (#-experiment-2-model-view-controller-mvc-architecture)
+7. "Experiment 3: TCP Client-Server" (#-experiment-3-tcp-socket-programming)
+8. "Experiment 4: JDBC Operations" (#-experiment-4-java-database-connectivity-jdbc)
+9. "Experiment 5: Database-Integrated GUI" (#-experiment-5-swing--jdbc-integration)
+10. "Experiment 6: Java RMI" (#-experiment-6-remote-method-invocation)
+11. "Experiment 7: Apache Tomcat" (#-experiment-7-web-server-setup--deployment)
+12. "Experiment 8: Servlets, Filters & Listeners" (#-experiment-8-java-web-development)
+13. "Experiment 9: Capstone Project" (#-experiment-9-capstone-project)
+14. "Getting Started" (#-getting-started)
+15. "Learning Outcomes" (#-learning-outcomes)
+16. "Author" (#-author)
+
+---
+
+📑 Index of Experiments
+
+Exp. No.| Experiment Title| Core Technologies| Directory
+01| Student Registration GUI Form| Java Swing, AWT, Event Handling| "exp1/"
+02| MVC Pattern Calculator Application| Java Swing, MVC| "calc/"
+03| TCP Socket Client-Server Communication| Java Networking, Sockets, I/O Streams| Check actual source folder
+04| Database Connectivity and SQL Operations| JDBC, MySQL, PreparedStatement| "jdbc/"
+05| Database-Integrated Registration GUI| Swing, JDBC, MySQL| Check actual source folder
+06| Distributed Computing using Java RMI| Remote Interfaces, RMI Registry| "Remote-Method-Invocation/"
+07| Web Server Setup and Deployment| Apache Tomcat, WAR Deployment| "apache-tomcat-9.0.121/"
+08| Java Web Development| Servlets, Filters, Listeners| "servent/"
+09| Cycling E-Commerce Capstone Project| Java, Web Technologies, Database| "BikeIsNice/"
+
+Note: Confirm the directory names and experiment descriptions against the actual files in this repository before submitting.
+
+---
+
+🛠️ Prerequisites & System Setup
+
+Ensure the following tools are installed on your workstation.
+
+Requirement| Recommended Version| Purpose
+Java Development Kit| JDK 17 or compatible| Compile and run Java programs
+MySQL Server| 8.0+| Database operations
+Apache Maven| 3.8+| Build Maven-based applications
+Apache Tomcat| Compatible version| Deploy Servlet applications
+IDE| VS Code or IntelliJ IDEA| Development and debugging
+Git| Current stable release| Version control
+
+Verify Java Installation
+
 java -version
 javac -version
-MySQL Database Server (8.0+):
-mysql --version
-Apache Maven (3.8+):
+
+Verify Maven Installation
+
 mvn -version
-Apache Tomcat Server (9.0.x or 10.1+/11.0.x): Bundled inside apache-tomcat-9.0.121/ for Servlet development.
-🧪 Experiment 1: GUI Form Development using Java Swing
-🎯 Aim & Objective
-To design and implement an interactive desktop Graphical User Interface (GUI) for a Student Registration Form using Java Swing components and event listeners.
 
-📂 Directory & File Structure
-exp1/
-├── StudentRegistration.java    # Swing GUI class with ActionListener
-└── StudentRegistration.class   # Compiled bytecode
-💡 Key Concepts & Implementation Details
-Components Used: JFrame, JLabel, JTextField, JRadioButton, ButtonGroup, JCheckBox, JButton.
-Layout Management: Absolute positioning with setLayout(null) and setBounds(x, y, width, height).
-Event Handling: Implements ActionListener to capture button clicks on Submit and Reset.
-User Validation: Validates required fields and terms acceptance, rendering user details via JOptionPane.showMessageDialog().
+Verify MySQL Installation
+
+mysql --version
+
+---
+
+💻 Technology Stack
+
+Category| Technologies
+Programming Language| Java
+GUI Development| Swing, AWT
+Architecture| Model-View-Controller (MVC)
+Database| MySQL
+Database Connectivity| JDBC
+Networking| TCP Sockets
+Distributed Computing| Java RMI
+Web Development| Servlets, Filters, Listeners
+Web Server| Apache Tomcat
+Build Tool| Apache Maven
+Version Control| Git and GitHub
+
+---
+
+📂 Repository Structure
+
+java_lab_expirement/
+│
+├── .idea/
+├── .vscode/
+│
+├── exp1/
+│   └── StudentRegistration.java
+│
+├── calc/
+│   ├── ModelsCalculator.java
+│   ├── ViewsCalculator.java
+│   ├── ControllerCalculator.java
+│   └── Runmain.java
+│
+├── jdbc/
+│
+├── Remote-Method-Invocation/
+│
+├── apache-tomcat-9.0.121/
+│
+├── servent/
+│
+├── BikeIsNice/
+│
+└── README.md
+
+This is an indicative structure. Refer to the repository file listing for the exact files and subdirectories. Add any additional experiment directories that exist in your local copy.
+
+---
+
+🧪 Experiment 1: GUI Form Development Using Java Swing
+
+🎯 Aim & Objective
+
+To design and implement an interactive Student Registration Form using Java Swing components and event handling.
+
+💡 Key Concepts
+
+- "JFrame" for the application window.
+- "JLabel" and "JTextField" for labels and input fields.
+- "JRadioButton" and "ButtonGroup" for single-choice selection.
+- "JCheckBox" for acceptance of terms.
+- "JButton" and "ActionListener" for user interaction.
+- Input validation and dialog messages using "JOptionPane".
+
 🚀 Compilation & Execution
-# Navigate to experiment directory
+
 cd exp1
-
-# Compile
 javac StudentRegistration.java
-
-# Run
 java StudentRegistration
+
+Ensure the filename and class name match the actual source code.
+
+---
+
 🧪 Experiment 2: Model-View-Controller (MVC) Architecture
-🎯 Aim & Objective
-To design and implement an interactive desktop Calculator adhering strictly to the Model-View-Controller (MVC) architectural design pattern, separating business logic, user interface, and event handling.
 
-📂 Directory & File Structure
+🎯 Aim & Objective
+
+To implement a calculator application using the MVC design pattern, separating business logic, user interface, and event handling.
+
+💡 Key Concepts
+
+- Model: Performs arithmetic calculations.
+- View: Displays the graphical user interface.
+- Controller: Handles events and coordinates model-view interaction.
+- Input parsing and validation.
+- Handling arithmetic errors, including division by zero.
+
+📂 Indicative File Structure
+
 calc/
-├── ModelsCalculator.java       # Model: Contains arithmetic calculation logic
-├── ViewsCalculator.java        # View: Builds Swing GUI components & layouts
-├── ControllerCalculator.java   # Controller: Binds View events to Model methods
-├── Runmain.java                # Application Entry Point
-└── README.md                   # Module documentation
-💡 Key Concepts & Implementation Details
-Model (ModelsCalculator): Encapsulates arithmetic operations (add, sub, multiply, divide) and edge-case handling (e.g. division by zero).
-View (ViewsCalculator): Constructs the UI with JTextField for input/display and operator buttons (+, -, *, /).
-Controller (ControllerCalculator): Attaches action listeners to the view buttons, parses inputs, triggers Model operations, and updates the view display.
-Benefits: Loose coupling, high maintainability, and clean code separation.
+├── ModelsCalculator.java
+├── ViewsCalculator.java
+├── ControllerCalculator.java
+└── Runmain.java
+
 🚀 Compilation & Execution
-# Navigate to experiment directory
+
 cd calc
-
-# Compile all source files
 javac *.java
-
-# Launch application
 java Runmain
-🧪 Experiment 3: TCP Socket Programming (Client-Server Communication)
+
+---
+
+🧪 Experiment 3: TCP Socket Programming
+
 🎯 Aim & Objective
-To implement two-way network communication over a TCP connection using Java Sockets (java.net package) with a dedicated Server and Client echo protocol.
 
-📂 Directory & File Structure
-server-client/
-├── server.java     # TCP Server listening on port 5000
-└── client.java     # TCP Client connecting to localhost:5000
-💡 Key Concepts & Implementation Details
-TCP Socket Architecture: Utilizes ServerSocket on port 5000 to listen for incoming connections and Socket to establish client-server streams.
-I/O Streams: Uses BufferedReader wrapping InputStreamReader for receiving messages and PrintWriter with auto-flush for sending text over the stream.
-Communication Protocol:
-The server echoes every message back with an "Echo: <message>" prefix.
-Graceful disconnection protocol when the client transmits "bye".
+To establish communication between a Java client and server using TCP sockets.
+
+💡 Key Concepts
+
+- "ServerSocket" for accepting connections.
+- "Socket" for client-server communication.
+- Input and output streams.
+- Message exchange and response handling.
+- Connection termination and error handling.
+
 🚀 Compilation & Execution
-Open two terminal windows:
 
-# Compile both programs
-cd server-client
+Navigate to the directory containing the client and server Java files.
+
 javac server.java client.java
 
-# Terminal 1: Start Server
+Start the server in the first terminal:
+
 java server
 
-# Terminal 2: Start Client
-java client
-🧪 Experiment 4: Java Database Connectivity (JDBC) CRUD Operations
-🎯 Aim & Objective
-To establish a connection between a Java program and a MySQL relational database using JDBC (Type-4 Driver), execute parameterized queries, and perform basic CRUD operations.
+Start the client in a second terminal:
 
-📂 Directory & File Structure
-jdbc/exp3/
-├── lib/
-│   └── mysql-connector-j-26.7.0.jar   # MySQL JDBC Driver library
-├── src/
-│   └── Main.java                      # JDBC connection, insert & query execution
-├── bin/                               # Compiled classes
-└── README.md                          # Configuration notes
-💡 Key Concepts & Implementation Details
-Driver Registration: Loading the MySQL driver class Class.forName("com.mysql.cj.jdbc.Driver").
-Connection Management: Connecting via DriverManager.getConnection(url, user, password).
-Parameterized SQL with PreparedStatement: Safe query execution for inserting student records into the database.
-Data Retrieval with Statement & ResultSet: Executing SELECT queries and reading result records via cursor traversal (rs.next()).
-🗄️ Database Setup
-CREATE DATABASE IF NOT EXISTS collage_db;
-USE collage_db;
+java client
+
+The source filenames, class names, and port number must match your actual implementation.
+
+---
+
+🧪 Experiment 4: Java Database Connectivity (JDBC)
+
+🎯 Aim & Objective
+
+To connect a Java application to a MySQL database and perform SQL operations using JDBC.
+
+💡 Key Concepts
+
+- "DriverManager" and "Connection".
+- JDBC driver configuration.
+- "PreparedStatement" for parameterized SQL queries.
+- "Statement" and "ResultSet" for data retrieval.
+- CRUD operations: Create, Read, Update, and Delete.
+- Database connection management.
+
+🗄️ Example Database Setup
+
+Use the following example only if it matches your program's schema:
+
+CREATE DATABASE IF NOT EXISTS college_db;
+USE college_db;
 
 CREATE TABLE IF NOT EXISTS Student (
     id INT PRIMARY KEY,
     name VARCHAR(100),
     branch VARCHAR(50)
 );
-🚀 Compilation & Execution
-cd jdbc/exp3
 
-# Compile with JDBC Driver in classpath
-javac -cp "lib/*:src" src/Main.java -d bin
+🚀 Execution
 
-# Run program
-java -cp "lib/*:bin" Main
-🧪 Experiment 5: Database-Driven GUI Application (Swing + JDBC Integration)
+For a project that contains a "src/" directory and a "lib/" directory with the JDBC driver:
+
+javac -cp "lib/*" -d bin src/Main.java
+
+Run the program using the classpath and main class appropriate to your actual project.
+
+Update the database name, table names, credentials, and paths according to your source code.
+
+---
+
+🧪 Experiment 5: Swing & JDBC Integration
+
 🎯 Aim & Objective
-To develop a database-integrated desktop application by connecting a Java Swing GUI form to a MySQL database, persisting user registration data through JDBC.
 
-📂 Directory & File Structure
-strjdbc/
-├── lib/
-│   └── mysql-connector-j-26.7.0.jar   # MySQL JDBC Driver
-├── src/
-│   └── StudentRegistration.java       # Full Swing GUI with JDBC persistence
-├── bin/                               # Compiled classes
-└── README.md
-💡 Key Concepts & Implementation Details
-Integrated Architecture: Merges interactive Swing UI (JFrame, JTextField, JRadioButton, JCheckBox) with a JDBC data persistence layer.
-Robust Input Validation: Verifies that required fields are non-empty and terms are accepted before executing database calls.
-Database Persistence: Employs PreparedStatement to insert sanitized student records (name, roll, gender, branch) into table streg.
-Thread Safety: Dispatches UI rendering via SwingUtilities.invokeLater().
-🗄️ Database Setup
-CREATE DATABASE IF NOT EXISTS collage_db;
-USE collage_db;
+To develop a desktop GUI application that stores registration data in a MySQL database.
 
-CREATE TABLE IF NOT EXISTS streg (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    roll VARCHAR(50) NOT NULL,
-    gender VARCHAR(10),
-    branch VARCHAR(50)
-);
-🚀 Compilation & Execution
-cd strjdbc
+💡 Key Concepts
 
-# Compile
-javac -cp "lib/*:src" src/StudentRegistration.java -d bin
+- Swing components for form development.
+- Form validation.
+- JDBC connection management.
+- "PreparedStatement" for inserting data.
+- Database persistence.
+- Handling database errors.
 
-# Run
-java -cp "lib/*:bin" StudentRegistration
-🧪 Experiment 6: Remote Method Invocation (Java RMI Distributed Computing)
+🚀 Execution
+
+Open the experiment directory containing the source files and JDBC driver.
+
+Compile the Java program using the correct source path and library classpath. Configure the MySQL database and credentials before running the application.
+
+The exact directory and commands depend on the files present in your repository.
+
+---
+
+🧪 Experiment 6: Remote Method Invocation (Java RMI)
+
 🎯 Aim & Objective
-To build a distributed client-server application using Java Remote Method Invocation (RMI), allowing a remote client to execute object methods hosted on a remote server.
 
-📂 Directory & File Structure
+To implement distributed method calls between a Java client and a remote server.
+
+💡 Key Concepts
+
+- Remote interfaces extending "java.rmi.Remote".
+- "RemoteException".
+- "UnicastRemoteObject".
+- RMI Registry and service binding.
+- Remote lookup and method invocation.
+
+📂 Indicative File Structure
+
 Remote-Method-Invocation/
-├── Calculator.java         # Remote Interface (extends java.rmi.Remote)
-├── CalculatorImpl.java     # Remote Implementation (extends UnicastRemoteObject)
-├── Server.java             # RMI Server (binds service to RMI Registry)
-└── client.java             # RMI Client (performs lookup and calls remote methods)
-💡 Key Concepts & Implementation Details
-Remote Interface (Calculator): Declares remote methods (add, subtract) throwing RemoteException.
-Remote Implementation (CalculatorImpl): Extends UnicastRemoteObject to export the object for remote communication.
-RMI Registry & Binding: Server creates the implementation and registers it via Naming.rebind("rmi://localhost/CalculatorService", calc).
-Client Lookup & Invocation: client resolves the remote stub via Naming.lookup(...) and transparently invokes arithmetic operations across JVMs.
-🚀 Compilation & Execution
-cd Remote-Method-Invocation
+├── Calculator.java
+├── CalculatorImpl.java
+├── Server.java
+└── client.java
 
-# Compile all RMI files
+🚀 Compilation & Execution
+
+cd Remote-Method-Invocation
 javac *.java
 
-# Start RMI Registry (if not embedded)
-rmiregistry &
+Start the RMI Registry if your server does not create it automatically, then start the server and run the client in separate terminals.
 
-# Terminal 1: Start RMI Server
 java Server
 
-# Terminal 2: Run RMI Client
 java client
-🧪 Experiment 7: Web Server Environment Setup & Application Deployment (Apache Tomcat)
+
+Ensure the registry port, service name, and host configuration match the source code.
+
+---
+
+🧪 Experiment 7: Web Server Setup & Deployment
+
 🎯 Aim & Objective
-To configure and manage an enterprise Java Servlet Container and Web Server (Apache Tomcat 9), understand the container directory structure, configure deployment descriptors, and deploy web applications.
 
-📂 Directory & File Structure
-apache-tomcat-9.0.121/
-├── bin/                    # Server lifecycle scripts (startup.sh, shutdown.sh, catalina.sh)
-├── conf/                   # Configuration files (server.xml, web.xml, context.xml)
-├── lib/                    # Servlet API & container libraries (servlet-api.jar, jsp-api.jar)
-├── logs/                   # Catalina and access log files
-├── webapps/                # Deployment folder for web applications
-│   ├── myWebapp/           # Static and dynamic test webapp
-│   └── servlet-1.0-SNAPSHOT.war # Deployed Web Archive
-└── work/                   # Compiled JSP servlets and temporary runtime files
-💡 Key Concepts & Implementation Details
-Servlet Container Lifecycle: Starting, stopping, and inspecting server logs.
-Port & Connector Configuration: Configuring HTTP connectors in conf/server.xml (default port 8080).
-WAR Deployment: Automated unpacking and deployment of Web Application Archives in webapps/.
-🚀 Running the Tomcat Server
-cd apache-tomcat-9.0.121/bin
+To understand Apache Tomcat configuration and the deployment of Java web applications.
 
-# Ensure scripts have execute permissions
-chmod +x *.sh
+💡 Key Concepts
 
-# Start Tomcat Server
-./startup.sh
+- Tomcat directory structure.
+- Configuration files and HTTP connectors.
+- Web application deployment.
+- WAR packaging.
+- Server startup, shutdown, and logs.
 
-# Open browser: http://localhost:8080/
+🚀 Starting Tomcat on Windows
 
-# Stop Tomcat Server
-./shutdown.sh
-🧪 Experiment 8: Java Web Development with Servlets, Filters, and Listeners
+Open PowerShell or Command Prompt:
+
+cd apache-tomcat-9.0.121\bin
+.\startup.bat
+
+To stop the server:
+
+.\shutdown.bat
+
+Open the following address in your browser after the server starts:
+
+http://localhost:8080/
+
+Use a compatible Tomcat version for the Servlet API required by your web application.
+
+---
+
+🧪 Experiment 8: Java Web Development
+
 🎯 Aim & Objective
-To develop a dynamic Java Web Application utilizing the Servlet API (Jakarta EE), demonstrating form processing, session tracking (HttpSession), request filtering (@WebFilter), and application lifecycle events (@WebListener).
 
-📂 Directory & File Structure
-servent/
-├── pom.xml                 # Maven build file configured for Jakarta Servlet API
-└── src/
-    └── main/
-        ├── java/com/servelent/
-        │   ├── HelloServlet.java   # Form processing & RequestDispatcher forward
-        │   ├── LoginServlet.java   # Authentication & session creation
-        │   ├── HomeServlet.java    # Protected user home page
-        │   ├── AuthFilter.java     # Security filter restricting /home
-        │   ├── AppListener.java    # ServletContextListener lifecycle logger
-        │   └── Main.java           # Runner / helper
-        └── webapp/
-            └── index.html          # Login and entry HTML form
-💡 Key Concepts & Implementation Details
-HelloServlet (@WebServlet("/hello")): Extracts form parameters (request.getParameter()), sets request attributes (request.setAttribute()), and dispatches to views.
-LoginServlet (@WebServlet("/login")): Authenticates credentials, creates a user session via request.getSession(), and sets session attributes.
-HomeServlet (@WebServlet("/home")): Displays personalized content for authenticated users with active sessions.
-AuthFilter (@WebFilter("/home")): Intercepts requests to /home, checks for valid user sessions, and redirects unauthorized users back to index.html.
-AppListener (@WebListener): Implements ServletContextListener to log messages upon application startup (contextInitialized) and shutdown (contextDestroyed).
-🚀 Building and Deploying with Maven
+To develop a web application using Java Servlets and demonstrate request processing, session management, filters, and application listeners.
+
+💡 Key Concepts
+
+- HTTP request and response handling.
+- Servlet URL mappings.
+- Session management using "HttpSession".
+- Authentication and request filters.
+- Application lifecycle listeners.
+- Maven build and WAR deployment.
+
+🚀 Building with Maven
+
+If the experiment contains a "pom.xml" file:
+
 cd servent
-
-# Build WAR archive using Maven
 mvn clean package
 
-# Copy generated WAR into Tomcat webapps
-cp target/servlet-1.0-SNAPSHOT.war ../apache-tomcat-9.0.121/webapps/
+The generated WAR file is normally placed in the project's "target/" directory.
 
-# Start Tomcat and browse:
-# http://localhost:8080/servlet-1.0-SNAPSHOT/
-🧪 Experiment 9 / Capstone: Enterprise Cycling E-Commerce Platform (BikeIsNice)
+Deploy it to a compatible Tomcat server and open the application context URL shown by the deployment configuration.
+
+Check the project's Servlet API dependency and Tomcat compatibility before deployment.
+
+---
+
+🧪 Experiment 9: Capstone Project — Cycling E-Commerce Platform
+
 🎯 Aim & Objective
-To architect and implement an enterprise-grade full-stack Java web application and distributed system (BikeIsNice / ShopSphere) synthesizing all Advanced Java concepts: Jakarta Servlets, JSP/JSTL views, custom tags, relational MySQL database with 12 tables, JDBC DAO design pattern, session security filters, native Java Swing desktop administration dashboard, and standalone distributed networking modules (Sockets & RMI).
 
-📂 Directory & File Structure
+To apply Advanced Java concepts in an integrated e-commerce application.
+
+💡 Areas of Implementation
+
+Depending on the actual project source, this experiment may cover:
+
+- Product catalogue and product details.
+- User registration and authentication.
+- Shopping cart and order management.
+- JDBC database operations.
+- Java web application architecture.
+- Administrative interfaces.
+- Networking and distributed services.
+
+📂 Project Directory
+
 BikeIsNice/
-├── pom.xml                         # Maven project configuration (Jakarta EE 11)
-├── shopsphere.sql                  # Complete MySQL schema (12 tables + seed data)
-├── test-networking.sh              # Automated test runner for Sockets and RMI
-├── README.md                       # Dedicated detailed documentation
-├── src/main/
-│   ├── java/com/shopsphere/
-│   │   ├── controller/             # Jakarta Servlets (Cart, Checkout, Login, Product, Register)
-│   │   ├── dao/                    # JDBC DAO Layer (PreparedStatements & connection pooling)
-│   │   ├── desktop/                # Native Swing Administration GUI (AdminDashboard, LoginFrame)
-│   │   ├── filter/                 # Security Filters (AdminFilter, AuthenticationFilter)
-│   │   ├── model/                  # Domain POJOs & Entities (implements Serializable)
-│   │   ├── network/
-│   │   │   ├── rmi/                # Java RMI inventory service & client
-│   │   │   └── socket/             # Low-level TCP Socket inventory server & client
-│   │   ├── service/                # Business logic & zero-trust server checkout engine
-│   │   └── util/                   # DBConnection & PBKDF2 Password Hashing
-│   └── webapp/
-│       ├── index.jsp               # Storefront portal & catalog router
-│       ├── products.jsp            # Product catalog with category filters
-│       ├── cart.jsp                # Interactive shopping cart
-│       ├── checkout.jsp            # Secure checkout workflow
-│       ├── admin/                  # Protected manager views (dashboard, orders)
-│       └── WEB-INF/tags/           # Custom reusable JSP tags (productCard, rating)
-└── target/
-    └── shopsphere.war              # Packaged ready-to-deploy Web Application Archive
-💡 Enterprise Features & Advanced Java Highlights
-Full-Stack Web Architecture: Jakarta Servlet 6.1, JSP 3.1, JSTL 3.0, and Bootstrap 5.3.
-Zero-Trust Pricing & Checkout Engine: Computes subtotals, taxes, and promotional coupons on the server to prevent client-side price tampering.
-Database & Persistence: 12 relational MySQL tables (users, products, orders, order_items, cart_items, categories, coupons, payments, etc.) utilizing pure PreparedStatement queries.
-Desktop Administrator GUI: Java Swing desktop app with native OS Pluggable Look and Feel (PLAF), JTabbedPane, and JTable inside JScrollPane for real-time inventory and order management.
-Distributed Networking Modules:
-TCP Sockets: SocketInventoryServer & SocketInventoryClient implementing a custom inventory protocol.
-Java RMI: RmiInventoryServer & RmiInventoryClient with remote procedure calls for inventory status updates.
-🚀 Running the Capstone Platform
-cd BikeIsNice
 
-# Step 1: Import Database Schema & Seed Data
-mysql -u root -ppassword < shopsphere.sql
+🚀 Getting Started
 
-# Step 2: Build the WAR package
-mvn clean package
+1. Open the capstone project directory.
+2. Inspect its "README.md" and build configuration.
+3. Configure the required JDK and dependencies.
+4. Set up the database if the project requires one.
+5. Build using the project's documented build commands.
+6. Run or deploy the application according to its configuration.
 
-# Step 3: Run the Swing Desktop Admin Application
-java -cp target/classes com.shopsphere.desktop.LoginFrame
+Follow the project-specific instructions and verify that the described features are implemented in the actual source code.
 
-# Step 4: Run the Standalone Networking Test Suite (Sockets + RMI)
-./test-networking.sh
-👨‍💻 Repository Author
-Author: Pranaay kantiwal
-Course: Advanced Java Laboratory (ADJ Lab)
-Repository: java_lab_expirement
+---
+
+🚀 Getting Started
+
+1. Clone the Repository
+
+git clone https://github.com/pranaaykantiwal-sketch/java_lab_expirement.git
+
+2. Navigate to the Project
+
+cd java_lab_expirement
+
+3. Open in Your IDE
+
+Open the repository folder in Visual Studio Code or IntelliJ IDEA.
+
+4. Configure the Environment
+
+- Configure a compatible JDK.
+- Install MySQL if required by an experiment.
+- Configure JDBC libraries and database credentials.
+- Configure Apache Tomcat for web applications.
+- Install Maven for projects that use a "pom.xml" file.
+
+5. Run the Required Experiment
+
+Navigate to the appropriate experiment directory and follow its compilation and execution instructions.
+
+---
+
+📈 Learning Outcomes
+
+This laboratory provides opportunities to develop practical skills in:
+
+- Object-oriented Java programming.
+- GUI development and event-driven programming.
+- MVC software architecture.
+- Database connectivity and SQL operations.
+- Network programming and distributed systems.
+- Java web development and application deployment.
+- Debugging, project organization, and version control.
+
+👨‍💻 Author
+
+Pranaay Kantiwal
+
+B.Tech — Computer Science and Engineering
+Global Institute of Technology (GIT), Jaipur, Rajasthan, India
+
+- GitHub Profile: "@pranaaykantiwal-sketch" (https://github.com/pranaaykantiwal-sketch)
+- Repository: "java_lab_expirement" (https://github.com/pranaaykantiwal-sketch/java_lab_expirement)
+
+Original Source & Attribution
+
+This repository includes code based on an existing Advanced Java Lab repository. Original authors and contributors should receive appropriate credit, and any changes or additional implementations should be identified accurately.
+
+Reference repository: "Sahil1205-jat/adjrepo" (https://github.com/Sahil1205-jat/adjrepo)
+
+---
+
+<p align="center">
+  <b>Advanced Java Programming Laboratory</b><br>
+  <sub>Built for learning, experimentation, and academic practice.</sub>
+</p>
