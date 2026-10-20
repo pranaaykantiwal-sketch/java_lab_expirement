@@ -1,247 +1,190 @@
-☕ Advanced Java Programming Laboratory (ADJ Lab)
+# ☕ Advanced Java Programming Laboratory (ADJ Lab)
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=openjdk" alt="Java">
+  <img src="https://img.shields.io/badge/Database-MySQL-blue?style=for-the-badge&logo=mysql" alt="MySQL">
+  <img src="https://img.shields.io/badge/Web-Servlets-green?style=for-the-badge" alt="Servlets">
+  <img src="https://img.shields.io/badge/Server-Apache%20Tomcat-yellow?style=for-the-badge&logo=apachetomcat" alt="Tomcat">
+</p>
 
-  A comprehensive collection of Advanced Java laboratory experiments, practical implementations, and academic projects for B.Tech Computer Science and Engineering students.
-📌 Overview
+<p align="center">
+  <b>A comprehensive collection of Advanced Java laboratory experiments, practical implementations, and academic projects.</b>
+</p>
 
-Welcome to my Advanced Java Programming Laboratory repository.
+---
 
-This repository contains practical implementations of Advanced Java concepts, including desktop GUI development, MVC architecture, TCP socket programming, database connectivity, distributed computing, and Java web application development.
+## 📌 Overview
 
-The experiments are organized to support hands-on learning and demonstrate the practical application of Java programming concepts as part of the B.Tech Computer Science and Engineering curriculum.
+This repository contains practical implementations of Advanced Java concepts developed as part of the B.Tech Computer Science and Engineering curriculum.
 
-🎯 Objectives
+The experiments cover GUI development, MVC architecture, TCP socket programming, JDBC database connectivity, distributed computing, and Java web application development.
 
-- Develop desktop applications using Java Swing and AWT.
-- Understand the Model-View-Controller (MVC) design pattern.
-- Implement TCP-based client-server communication.
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Index of Experiments](#index-of-experiments)
+- [Prerequisites and System Setup](#prerequisites-and-system-setup)
+- [Experiment 1: Student Registration GUI](#experiment-1-student-registration-gui-form)
+- [Experiment 2: MVC Calculator](#experiment-2-mvc-calculator-application)
+- [Experiment 3: TCP Socket Programming](#experiment-3-tcp-socket-client-server-communication)
+- [Experiment 4: JDBC Database Connectivity](#experiment-4-jdbc-database-connectivity)
+- [Experiment 5: Swing and JDBC Integration](#experiment-5-swing-and-jdbc-integration)
+- [Experiment 6: Java RMI](#experiment-6-java-rmi)
+- [Experiment 7: Apache Tomcat](#experiment-7-apache-tomcat-deployment)
+- [Experiment 8: Servlets, Filters and Listeners](#experiment-8-servlets-filters-and-listeners)
+- [Experiment 9: BikeIsNice Capstone](#experiment-9-bikeisnice-capstone-project)
+- [Getting Started](#getting-started)
+- [Learning Outcomes](#learning-outcomes)
+- [Author](#author)
+
+---
+
+## 🎯 Objectives
+
+- Develop GUI applications using Java Swing and AWT.
+- Understand the Model-View-Controller design pattern.
+- Implement client-server communication using TCP sockets.
 - Perform database operations using JDBC and MySQL.
-- Integrate graphical user interfaces with relational databases.
-- Explore distributed computing through Java RMI.
-- Configure and deploy Java web applications using Apache Tomcat.
-- Understand Servlets, session management, filters, and listeners.
-- Apply Advanced Java concepts in an integrated project.
-
-📋 Table of Contents
-
-1. "Index of Experiments" (#-index-of-experiments)
-2. "Prerequisites & System Setup" (#️-prerequisites--system-setup)
-3. "Technology Stack" (#-technology-stack)
-4. "Repository Structure" (#-repository-structure)
-5. "Experiment 1: Java Swing GUI" (#-experiment-1-gui-form-development-using-java-swing)
-6. "Experiment 2: MVC Calculator" (#-experiment-2-model-view-controller-mvc-architecture)
-7. "Experiment 3: TCP Client-Server" (#-experiment-3-tcp-socket-programming)
-8. "Experiment 4: JDBC Operations" (#-experiment-4-java-database-connectivity-jdbc)
-9. "Experiment 5: Database-Integrated GUI" (#-experiment-5-swing--jdbc-integration)
-10. "Experiment 6: Java RMI" (#-experiment-6-remote-method-invocation)
-11. "Experiment 7: Apache Tomcat" (#-experiment-7-web-server-setup--deployment)
-12. "Experiment 8: Servlets, Filters & Listeners" (#-experiment-8-java-web-development)
-13. "Experiment 9: Capstone Project" (#-experiment-9-capstone-project)
-14. "Getting Started" (#-getting-started)
-15. "Learning Outcomes" (#-learning-outcomes)
-16. "Author" (#-author)
+- Integrate GUI applications with relational databases.
+- Explore distributed computing using Java RMI.
+- Deploy Java web applications using Apache Tomcat.
+- Understand Servlets, sessions, filters, and listeners.
 
 ---
 
-📑 Index of Experiments
+## 📑 Index of Experiments
 
-Exp. No.| Experiment Title| Core Technologies| Directory
-01| Student Registration GUI Form| Java Swing, AWT, Event Handling| "exp1/"
-02| MVC Pattern Calculator Application| Java Swing, MVC| "calc/"
-03| TCP Socket Client-Server Communication| Java Networking, Sockets, I/O Streams| Check actual source folder
-04| Database Connectivity and SQL Operations| JDBC, MySQL, PreparedStatement| "jdbc/"
-05| Database-Integrated Registration GUI| Swing, JDBC, MySQL| Check actual source folder
-06| Distributed Computing using Java RMI| Remote Interfaces, RMI Registry| "Remote-Method-Invocation/"
-07| Web Server Setup and Deployment| Apache Tomcat, WAR Deployment| "apache-tomcat-9.0.121/"
-08| Java Web Development| Servlets, Filters, Listeners| "servent/"
-09| Cycling E-Commerce Capstone Project| Java, Web Technologies, Database| "BikeIsNice/"
+| No. | Experiment Title | Core Technologies | Directory |
+|:---:|---|---|---|
+| 01 | Student Registration GUI Form | Swing, AWT, Event Handling | `exp1/` |
+| 02 | MVC Calculator Application | Java Swing, MVC | `calc/` |
+| 03 | TCP Client-Server Communication | Java Networking, Sockets | `server-client/` |
+| 04 | JDBC Database Connectivity | JDBC, MySQL, SQL | `jdbc/` |
+| 05 | Database-Integrated GUI | Swing, JDBC, MySQL | `strjdbc/` |
+| 06 | Distributed Computing | Java RMI | `Remote-Method-Invocation/` |
+| 07 | Web Server Setup and Deployment | Apache Tomcat | `apache-tomcat-9.0.121/` |
+| 08 | Java Web Development | Servlets, Filters, Listeners | `servent/` |
+| 09 | Cycling E-Commerce Capstone | Java, Web Technologies | `BikeIsNice/` |
 
-Note: Confirm the directory names and experiment descriptions against the actual files in this repository before submitting.
+*Verify directory names against the actual repository before running commands.*
 
 ---
 
-🛠️ Prerequisites & System Setup
+## 🛠️ Prerequisites and System Setup
 
-Ensure the following tools are installed on your workstation.
+| Requirement | Recommended Version |
+|---|---|
+| Java Development Kit | JDK 17 or compatible |
+| MySQL Server | 8.0+ |
+| Apache Maven | 3.8+ |
+| Apache Tomcat | Compatible version |
+| IDE | IntelliJ IDEA or VS Code |
+| Version Control | Git and GitHub |
 
-Requirement| Recommended Version| Purpose
-Java Development Kit| JDK 17 or compatible| Compile and run Java programs
-MySQL Server| 8.0+| Database operations
-Apache Maven| 3.8+| Build Maven-based applications
-Apache Tomcat| Compatible version| Deploy Servlet applications
-IDE| VS Code or IntelliJ IDEA| Development and debugging
-Git| Current stable release| Version control
+Verify Java:
 
-Verify Java Installation
-
+```bash
 java -version
 javac -version
+```
 
-Verify Maven Installation
+Verify Maven:
 
+```bash
 mvn -version
-
-Verify MySQL Installation
-
-mysql --version
+```
 
 ---
 
-💻 Technology Stack
+## 🧪 Experiment 1: Student Registration GUI Form
 
-Category| Technologies
-Programming Language| Java
-GUI Development| Swing, AWT
-Architecture| Model-View-Controller (MVC)
-Database| MySQL
-Database Connectivity| JDBC
-Networking| TCP Sockets
-Distributed Computing| Java RMI
-Web Development| Servlets, Filters, Listeners
-Web Server| Apache Tomcat
-Build Tool| Apache Maven
-Version Control| Git and GitHub
+### Aim
+To create a student registration form using Java Swing and AWT.
 
----
+### Concepts
+- JFrame, JLabel and JTextField
+- JRadioButton and JCheckBox
+- JButton and ActionListener
+- Input validation and JOptionPane
 
-📂 Repository Structure
+### Execution
 
-java_lab_expirement/
-│
-├── .idea/
-├── .vscode/
-│
-├── exp1/
-│   └── StudentRegistration.java
-│
-├── calc/
-│   ├── ModelsCalculator.java
-│   ├── ViewsCalculator.java
-│   ├── ControllerCalculator.java
-│   └── Runmain.java
-│
-├── jdbc/
-│
-├── Remote-Method-Invocation/
-│
-├── apache-tomcat-9.0.121/
-│
-├── servent/
-│
-├── BikeIsNice/
-│
-└── README.md
-
-This is an indicative structure. Refer to the repository file listing for the exact files and subdirectories. Add any additional experiment directories that exist in your local copy.
-
----
-
-🧪 Experiment 1: GUI Form Development Using Java Swing
-
-🎯 Aim & Objective
-
-To design and implement an interactive Student Registration Form using Java Swing components and event handling.
-
-💡 Key Concepts
-
-- "JFrame" for the application window.
-- "JLabel" and "JTextField" for labels and input fields.
-- "JRadioButton" and "ButtonGroup" for single-choice selection.
-- "JCheckBox" for acceptance of terms.
-- "JButton" and "ActionListener" for user interaction.
-- Input validation and dialog messages using "JOptionPane".
-
-🚀 Compilation & Execution
-
+```bash
 cd exp1
 javac StudentRegistration.java
 java StudentRegistration
-
-Ensure the filename and class name match the actual source code.
+```
 
 ---
 
-🧪 Experiment 2: Model-View-Controller (MVC) Architecture
+## 🧪 Experiment 2: MVC Calculator Application
 
-🎯 Aim & Objective
+### Aim
+To implement a calculator using the Model-View-Controller architecture.
 
-To implement a calculator application using the MVC design pattern, separating business logic, user interface, and event handling.
+### Concepts
+- Model: Arithmetic operations
+- View: Calculator GUI
+- Controller: Event handling
+- Input validation and error handling
 
-💡 Key Concepts
+### Execution
 
-- Model: Performs arithmetic calculations.
-- View: Displays the graphical user interface.
-- Controller: Handles events and coordinates model-view interaction.
-- Input parsing and validation.
-- Handling arithmetic errors, including division by zero.
-
-📂 Indicative File Structure
-
-calc/
-├── ModelsCalculator.java
-├── ViewsCalculator.java
-├── ControllerCalculator.java
-└── Runmain.java
-
-🚀 Compilation & Execution
-
+```bash
 cd calc
 javac *.java
 java Runmain
+```
 
 ---
 
-🧪 Experiment 3: TCP Socket Programming
+## 🧪 Experiment 3: TCP Socket Client-Server Communication
 
-🎯 Aim & Objective
-
+### Aim
 To establish communication between a Java client and server using TCP sockets.
 
-💡 Key Concepts
+### Concepts
+- ServerSocket and Socket
+- Input and output streams
+- Client-server communication
+- Connection handling
 
-- "ServerSocket" for accepting connections.
-- "Socket" for client-server communication.
-- Input and output streams.
-- Message exchange and response handling.
-- Connection termination and error handling.
+### Execution
 
-🚀 Compilation & Execution
-
-Navigate to the directory containing the client and server Java files.
-
+```bash
+cd server-client
 javac server.java client.java
+```
 
 Start the server in the first terminal:
 
+```bash
 java server
+```
 
-Start the client in a second terminal:
+Run the client in another terminal:
 
+```bash
 java client
-
-The source filenames, class names, and port number must match your actual implementation.
+```
 
 ---
 
-🧪 Experiment 4: Java Database Connectivity (JDBC)
+## 🧪 Experiment 4: JDBC Database Connectivity
 
-🎯 Aim & Objective
+### Aim
+To connect Java applications to MySQL and perform database operations using JDBC.
 
-To connect a Java application to a MySQL database and perform SQL operations using JDBC.
+### Concepts
+- DriverManager and Connection
+- PreparedStatement
+- SQL queries
+- ResultSet and database retrieval
 
-💡 Key Concepts
+### Example Database Setup
 
-- "DriverManager" and "Connection".
-- JDBC driver configuration.
-- "PreparedStatement" for parameterized SQL queries.
-- "Statement" and "ResultSet" for data retrieval.
-- CRUD operations: Create, Read, Update, and Delete.
-- Database connection management.
-
-🗄️ Example Database Setup
-
-Use the following example only if it matches your program's schema:
-
+```sql
 CREATE DATABASE IF NOT EXISTS college_db;
 USE college_db;
 
@@ -250,238 +193,183 @@ CREATE TABLE IF NOT EXISTS Student (
     name VARCHAR(100),
     branch VARCHAR(50)
 );
+```
 
-🚀 Execution
-
-For a project that contains a "src/" directory and a "lib/" directory with the JDBC driver:
-
-javac -cp "lib/*" -d bin src/Main.java
-
-Run the program using the classpath and main class appropriate to your actual project.
-
-Update the database name, table names, credentials, and paths according to your source code.
+Configure the JDBC driver, database URL, username and password according to the source code.
 
 ---
 
-🧪 Experiment 5: Swing & JDBC Integration
+## 🧪 Experiment 5: Swing and JDBC Integration
 
-🎯 Aim & Objective
+### Aim
+To develop a registration GUI that stores student details in a MySQL database.
 
-To develop a desktop GUI application that stores registration data in a MySQL database.
+### Concepts
+- Swing form components
+- JDBC connectivity
+- SQL INSERT operations
+- PreparedStatement and validation
 
-💡 Key Concepts
-
-- Swing components for form development.
-- Form validation.
-- JDBC connection management.
-- "PreparedStatement" for inserting data.
-- Database persistence.
-- Handling database errors.
-
-🚀 Execution
-
-Open the experiment directory containing the source files and JDBC driver.
-
-Compile the Java program using the correct source path and library classpath. Configure the MySQL database and credentials before running the application.
-
-The exact directory and commands depend on the files present in your repository.
+Compile using the actual source and JDBC driver paths. Configure MySQL before executing the application.
 
 ---
 
-🧪 Experiment 6: Remote Method Invocation (Java RMI)
+## 🧪 Experiment 6: Java RMI
 
-🎯 Aim & Objective
+### Aim
+To implement remote method invocation between Java client and server applications.
 
-To implement distributed method calls between a Java client and a remote server.
+### Concepts
+- Remote interfaces
+- RemoteException
+- RMI Registry
+- Remote method invocation
 
-💡 Key Concepts
+### Execution
 
-- Remote interfaces extending "java.rmi.Remote".
-- "RemoteException".
-- "UnicastRemoteObject".
-- RMI Registry and service binding.
-- Remote lookup and method invocation.
-
-📂 Indicative File Structure
-
-Remote-Method-Invocation/
-├── Calculator.java
-├── CalculatorImpl.java
-├── Server.java
-└── client.java
-
-🚀 Compilation & Execution
-
+```bash
 cd Remote-Method-Invocation
 javac *.java
+```
 
-Start the RMI Registry if your server does not create it automatically, then start the server and run the client in separate terminals.
-
-java Server
-
-java client
-
-Ensure the registry port, service name, and host configuration match the source code.
+Start the RMI registry if required, then run the server and client in separate terminals using their actual class names.
 
 ---
 
-🧪 Experiment 7: Web Server Setup & Deployment
+## 🧪 Experiment 7: Apache Tomcat Deployment
 
-🎯 Aim & Objective
+### Aim
+To understand web server configuration and Java web application deployment.
 
-To understand Apache Tomcat configuration and the deployment of Java web applications.
+### Concepts
+- Tomcat directory structure
+- Server startup and shutdown
+- WAR deployment
+- Server configuration
 
-💡 Key Concepts
+### Windows
 
-- Tomcat directory structure.
-- Configuration files and HTTP connectors.
-- Web application deployment.
-- WAR packaging.
-- Server startup, shutdown, and logs.
-
-🚀 Starting Tomcat on Windows
-
-Open PowerShell or Command Prompt:
-
+```powershell
 cd apache-tomcat-9.0.121\bin
 .\startup.bat
+```
 
-To stop the server:
+Open `http://localhost:8080/` in your browser.
 
+To stop Tomcat:
+
+```powershell
 .\shutdown.bat
-
-Open the following address in your browser after the server starts:
-
-http://localhost:8080/
-
-Use a compatible Tomcat version for the Servlet API required by your web application.
+```
 
 ---
 
-🧪 Experiment 8: Java Web Development
+## 🧪 Experiment 8: Servlets, Filters and Listeners
 
-🎯 Aim & Objective
+### Aim
+To develop a Java web application using Servlet API features.
 
-To develop a web application using Java Servlets and demonstrate request processing, session management, filters, and application listeners.
+### Concepts
+- HTTP request and response handling
+- Servlet mappings
+- Session management
+- Request filters
+- Application lifecycle listeners
+- Maven packaging
 
-💡 Key Concepts
+### Build
 
-- HTTP request and response handling.
-- Servlet URL mappings.
-- Session management using "HttpSession".
-- Authentication and request filters.
-- Application lifecycle listeners.
-- Maven build and WAR deployment.
-
-🚀 Building with Maven
-
-If the experiment contains a "pom.xml" file:
-
+```bash
 cd servent
 mvn clean package
+```
 
-The generated WAR file is normally placed in the project's "target/" directory.
-
-Deploy it to a compatible Tomcat server and open the application context URL shown by the deployment configuration.
-
-Check the project's Servlet API dependency and Tomcat compatibility before deployment.
+Deploy the generated WAR to a compatible Tomcat server. The application URL depends on its deployed context path.
 
 ---
 
-🧪 Experiment 9: Capstone Project — Cycling E-Commerce Platform
+## 🧪 Experiment 9: BikeIsNice Capstone Project
 
-🎯 Aim & Objective
+### Aim
+To apply Advanced Java concepts in an integrated e-commerce project.
 
-To apply Advanced Java concepts in an integrated e-commerce application.
+### Areas Covered
+- Java application development
+- Web application architecture
+- Database integration
+- Product and order management concepts
+- Modular application design
 
-💡 Areas of Implementation
+### Build
 
-Depending on the actual project source, this experiment may cover:
+```bash
+cd BikeIsNice
+mvn clean package
+```
 
-- Product catalogue and product details.
-- User registration and authentication.
-- Shopping cart and order management.
-- JDBC database operations.
-- Java web application architecture.
-- Administrative interfaces.
-- Networking and distributed services.
-
-📂 Project Directory
-
-BikeIsNice/
-
-🚀 Getting Started
-
-1. Open the capstone project directory.
-2. Inspect its "README.md" and build configuration.
-3. Configure the required JDK and dependencies.
-4. Set up the database if the project requires one.
-5. Build using the project's documented build commands.
-6. Run or deploy the application according to its configuration.
-
-Follow the project-specific instructions and verify that the described features are implemented in the actual source code.
+Check the project's own README and configuration for database setup and the correct startup procedure.
 
 ---
 
-🚀 Getting Started
+## 🚀 Getting Started
 
-1. Clone the Repository
+### 1. Clone the Repository
 
+```bash
 git clone https://github.com/pranaaykantiwal-sketch/java_lab_expirement.git
+```
 
-2. Navigate to the Project
+### 2. Navigate to the Project
 
+```bash
 cd java_lab_expirement
+```
 
-3. Open in Your IDE
+### 3. Open in Your IDE
 
-Open the repository folder in Visual Studio Code or IntelliJ IDEA.
+Open the project in IntelliJ IDEA or Visual Studio Code.
 
-4. Configure the Environment
+### 4. Configure Dependencies
 
-- Configure a compatible JDK.
-- Install MySQL if required by an experiment.
-- Configure JDBC libraries and database credentials.
-- Configure Apache Tomcat for web applications.
-- Install Maven for projects that use a "pom.xml" file.
+Install the required JDK, configure MySQL if needed, and set up the JDBC driver, Maven and Tomcat where applicable.
 
-5. Run the Required Experiment
+### 5. Run an Experiment
 
-Navigate to the appropriate experiment directory and follow its compilation and execution instructions.
+Navigate to the appropriate directory and follow its compilation and execution instructions.
 
 ---
 
-📈 Learning Outcomes
+## 🎓 Learning Outcomes
 
-This laboratory provides opportunities to develop practical skills in:
-
-- Object-oriented Java programming.
-- GUI development and event-driven programming.
-- MVC software architecture.
-- Database connectivity and SQL operations.
-- Network programming and distributed systems.
-- Java web development and application deployment.
-- Debugging, project organization, and version control.
-
-👨‍💻 Author
-
-Pranaay Kantiwal
-
-B.Tech — Computer Science and Engineering
-Global Institute of Technology (GIT), Jaipur, Rajasthan, India
-
-- GitHub Profile: "@pranaaykantiwal-sketch" (https://github.com/pranaaykantiwal-sketch)
-- Repository: "java_lab_expirement" (https://github.com/pranaaykantiwal-sketch/java_lab_expirement)
-
-Original Source & Attribution
-
-This repository includes code based on an existing Advanced Java Lab repository. Original authors and contributors should receive appropriate credit, and any changes or additional implementations should be identified accurately.
-
-Reference repository: "Sahil1205-jat/adjrepo" (https://github.com/Sahil1205-jat/adjrepo)
+- Java GUI development using Swing and AWT.
+- MVC architecture and code organization.
+- TCP networking and client-server communication.
+- JDBC and relational database operations.
+- Distributed computing with Java RMI.
+- Servlet-based web application development.
+- Application deployment and configuration.
+- Debugging and version control.
 
 ---
+
+## 👨‍💻 Author
+
+**Pranay Kantiwal**
+
+- **Course:** B.Tech, Computer Science and Engineering
+- **College:** Global Institute of Technology (GIT), Jaipur
+- **GitHub:** [@pranaaykantiwal-sketch](https://github.com/pranaaykantiwal-sketch)
+- **Repository:** [java_lab_expirement](https://github.com/pranaaykantiwal-sketch/java_lab_expirement)
+
+---
+
+## 🎓 Academic Purpose
+
+This repository is maintained for educational purposes, laboratory practice, and learning Advanced Java programming concepts.
+
+*Verify source filenames, directory paths, database configuration and dependencies before executing commands.*
 
 <p align="center">
-  <b>Advanced Java Programming Laboratory</b><br>
-  <sub>Built for learning, experimentation, and academic practice.</sub>
+  <b>Built with Java ☕</b><br>
+  <sub>Advanced Java Programming Laboratory</sub>
 </p>
